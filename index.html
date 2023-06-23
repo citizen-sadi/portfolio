@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>citizenSadi Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e08008ae0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="images/sadi_logo.png" alt="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-sharp fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Frontend Engineer</p>
+            <h1>Hi, I'm <span>Sadisu</span> Hassan <br>from Ghana</h1>
+        </div>
+        
+    </div>
+    </div>
+    <!-------------------About section----------- -->
+    <div id="about">
+        <div class="containner">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/sadi_portrait1.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello and welcome! I'm thrilled to have you here. Please allow me to introduce myself.  I'm an enthusiastic problem solver with a passion for <span>Communication and Information Technology</span>. If there's one thing that truly keeps me up all night, it's the thrill of delving into complex challenges and finding innovative solutions. <br><br>
+
+                        With a diverse background encompassing these two big axioms of society today, I bring a unique perspective to the table. I have honed my skills in effective communication, enabling me to bridge the gap between technical jargon and plain language, making complex concepts accessible to all. Simultaneously, my technical expertise allows me to grasp intricate IT systems and work towards solving problems efficiently.<br><br>
+                        
+                        In my quest for continuous growth, I find immense joy in surrounding myself with individuals who inspire and motivate me. I believe that the best way to learn is by collaborating with brilliant minds in the tech industry. I thrive on the energy and knowledge exchange that occurs when working alongside like-minded individuals who are passionate about pushing the boundaries of technology.<br><br>
+                        
+                        Throughout my journey, I have developed a keen interest in research, exploring new technologies, and staying updated with the latest advancements. My hunger for knowledge drives me to dive deep into various subjects, allowing me to discover innovative solutions and contribute meaningfully to the ever-evolving tech landscape.<br><br>
+                        
+                        Thank you for taking the time to learn a little bit about me. I hope you enjoy your visit, and I look forward to connecting with fellow problem solvers and lifelong learners like yourself. Together, let's continue to explore, innovate, and make a difference in the world around us by continuously striving to discover solutions to our everyday problems through technology.
+                        </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div> 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Enginner</span><br>Website develpment with: <br>HTML <br>CSS <br>JavaScrpit</li>
+                            <li><span>Product Management</span><br>Software project/product management</li>
+                            <li><span>Network Enginner</span><br>Building & maintaining LAN and WAN <br>Designing and deployment of Optical Fibre builds</li>
+                            <li><span>Journalism & PR</span><br>Journalistin & PR writing <br>Program design/hosting and production <br>Business Communication strategy <br>Corporate communication writing</li>
+                            <!-- <li><span>Corporate Communication</span><br></li> -->
+                        </ul>
+                    </div>    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Hexagram Limited</span><br>Project/Product Manager <br> Product feature development team member</li>
+                            <li><span>Tech-Centrum Limited</span><br>OSP project consultancy <br>OSP design and supervision</li>
+                            <li><span>iBurst Africa Ghana</span><br>Technical Support consultancy <br>LAN Administration <br>LAst Mile CPE Deployments</li>
+                            <li><span>Tech Aide Ghana</span><br>Office ICT systems Manager</li>
+                            <!-- <li><span>Corporate Communication</span><br>Corporate communication writing</li> -->
+                        </ul>
+                    </div>    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Codecamy 2023 - Ongoing</span><br>Frontend Engineer</li>
+                            <li><span>Pentecost University College Accra, Ghana 2014-2018</span><br>B.A Communication Studies(first class honors)</li>
+                            <li><span>Tejas Networks Bangalore, India 2015</span><br>Optical Network Standards Training(vendor proficiency)</li>
+                            <li><span>Advanced Information Technology Institute(AITI) Accra, Ghana 2009-2010</span>
+                                <br>CCNA - Networking for Home and Small Business<br>
+                                CCNA - Working from Small - Medium Business to the ISP <br>
+                                 CCNA - Introducing Switching and Routing in the Enterprise <br>
+                                CCNA - Designing and Supporting Computer Networks</li>
+                            <li><span>Vision One Systems Accra, Ghana 2004-2005</span><br>
+                                Computer Repairs & Assembling <br>Troubleshooting Computer Hardware <br>
+                            Designing & Building Local Area Networks</li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------Services Section------------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title sub-title2">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Development</h2>
+                    <p>With passion and enthusiasm for technology, I challenged myself to delve into the exciting world of coding. A challenging journey that has seem me build capacity as a ready to learn Frontend developer with a hunger and the humility to keep learning and improve. 
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Network Engineering</h2>
+                    <p>Skilled in the desing and deployment of Small and Home Office LANS to Entreprise multi-layer networks.  
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h2>Journalism, PR & Corporate Communication</h2>
+                    <p>With my passion for development through communication to understand and make an impact, I took on the challenge to train in journalism and communication. My passion drove me to achive excellence in this field of study.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------portfolio----------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Recent Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="images/project-1.png" alt="">
+                    <div class="layer">
+                        <h3>Real Estate Portal</h3>
+                        <p>Worked as a product owner together with a team of talented people to define product scope and feature set defition. Worked with design team to review entire system page by page and subsequestly oversaw product develpment process through a periodic review of development sprint by sprint. Finally carried out a system wide user acceptace testing accross platforms i.e Admin panel, Web portal, iOS and Androind Apps
+                        </p>
+                        <a href=""><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/project-3.png" alt="">
+                    <div class="layer">
+                        <h3>Event Ticketing System</h3>
+                        <p>Worked as a team member alongside a resourceful product team and a team of developers in the definition of scope, review of desings and development review/testing. Woked with business team to run system in a market environment.
+                        </p>
+                        <a href="https://www.ticketlake.com/"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="work">
+                    <img src="images/project-4.png" alt="">
+                    <div class="layer">
+                        <h3>Construction Firm Website</h3>
+                        <p>Designed and built a contruction company website using skills acquired during the early stages of my training as a Frontend deveolper using HTML and CSS.
+                        </p>
+                        <a href=""><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -----------------contact section -------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h3 class="sub-title">Contact Me</h3>
+                    <p> <i class="fa-solid fa-at"></i>hassansadisu@gmail.com</p>
+                    <p> <i class="fa-solid fa-mobile"></i>+233243732087</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                    <a href="images/sadi-CV.pdf" download class="btn btn-2">Download my CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="" name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="8" placeholder="Your message here" required></textarea>
+                        <button type="submit" class="btn btn-2">Send</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Developed with <i class="fa-solid fa-heart"></i>by citizenSadi</p>
+        </div>
+    </div>
+    
+    
+<script>
+    let tablinks = document.getElementsByClassName('tab-links')
+    let tabcontents = document.getElementsByClassName('tab-contents')
+
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add('active-tab');
+    }
+</script>  
+
+<script>
+    let sidemenu = document.getElementById('sidemenu')
+    function openmenu(){
+        sidemenu.style.right = '0';
+    }
+    function closemenu(){
+        sidemenu.style.right = '-130px';
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx-OPZ1qdQ4o9DybgqP5HeTnhUDXa_kPgVG44VVohKpTK31LG_DJrdnvkqAm6y6gPk/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = 'Message Sent Successfuly'
+            setTimeout(function(){
+                msg.innerHTML = ''
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
