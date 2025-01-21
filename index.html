@@ -193,48 +193,51 @@
     
     
 <script>
-    let tablinks = document.getElementsByClassName('tab-links')
-    let tabcontents = document.getElementsByClassName('tab-contents')
+   // JavaScript for Tabs
+let tablinks = document.querySelectorAll('.tab-links');
+let tabcontents = document.querySelectorAll('.tab-contents');
 
-    function opentab(tabname) {
-        for(tablink of tablinks){
-            tablink.classList.remove('active-link');
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove('active-tab');
-        }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add('active-tab');
-    }
-</script>  
+function opentab(tabname, event) {
+    tablinks.forEach((tablink) => tablink.classList.remove('active-link'));
+    tabcontents.forEach((tabcontent) => tabcontent.classList.remove('active-tab'));
 
-<script>
-    let sidemenu = document.getElementById('sidemenu')
-    function openmenu(){
-        sidemenu.style.right = '0';
-    }
-    function closemenu(){
-        sidemenu.style.right = '-130px';
-    }
-</script>
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabname).classList.add('active-tab');
+}
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx-OPZ1qdQ4o9DybgqP5HeTnhUDXa_kPgVG44VVohKpTK31LG_DJrdnvkqAm6y6gPk/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg');
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = 'Message Sent Successfuly'
-            setTimeout(function(){
-                msg.innerHTML = ''
-            }, 5000)
-            form.reset()
+// JavaScript for Side Menu
+let sidemenu = document.getElementById('sidemenu');
+
+function openmenu() {
+    sidemenu.style.right = '0';
+}
+
+function closemenu() {
+    sidemenu.style.right = '-130px';
+}
+
+// Form Submission Logic with Loading State
+const scriptURL =
+    'https://script.google.com/macros/s/AKfycbx-OPZ1qdQ4o9DybgqP5HeTnhUDXa_kPgVG44VVohKpTK31LG_DJrdnvkqAm6y6gPk/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    msg.innerHTML = 'Sending...';
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then((response) => {
+            msg.innerHTML = 'Message Sent Successfully!';
+            setTimeout(() => (msg.innerHTML = ''), 5000);
+            form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch((error) => {
+            console.error('Error!', error.message);
+            msg.innerHTML = 'Failed to send message. Please try again later.';
+        });
+});
+
   </script>
 </body>
 </html>
