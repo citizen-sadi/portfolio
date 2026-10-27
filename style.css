@@ -261,7 +261,7 @@ ul, ol { padding: 0; list-style: none; }
 }
 .hero-portrait img {
   width: 100%;
-  aspect-ratio: 683 / 1024;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
   background: var(--rule);
