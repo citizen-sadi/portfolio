@@ -2,7 +2,7 @@
 
 Personal portfolio site for Sadisu Hassan, IT support and systems specialist in Calgary.
 
-Live site: https://citizen-sadi.github.io/portfolio/
+Live site: https://citizensadi.com
 
 ## Structure
 
