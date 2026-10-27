@@ -37,9 +37,9 @@ if (fibre) {
   }
 }
 
-// Contact form: posts to the existing Google Sheets script
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx-OPZ1qdQ4o9DybgqP5HeTnhUDXa_kPgVG44VVohKpTK31LG_DJrdnvkqAm6y6gPk/exec';
-const form = document.forms['submit-to-google-sheet'];
+// Contact form: FormSubmit emails each message to the site owner
+const formEndpoint = 'https://formsubmit.co/ajax/hassansadisu@gmail.com';
+const form = document.forms['contact'];
 
 if (form) {
   const status = form.querySelector('.form-status');
@@ -75,8 +75,20 @@ if (form) {
     showStatus('');
 
     try {
-      const res = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = Object.fromEntries(new FormData(form));
+      const res = await fetch(formEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          _subject: `Portfolio message from ${data.Name}`,
+          _replyto: data.Email,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || String(result.success) !== 'true') throw new Error(result.message || `HTTP ${res.status}`);
       form.reset();
       fields.forEach((f) => f.removeAttribute('aria-invalid'));
       showStatus('Message sent. I’ll reply by email.');
