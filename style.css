@@ -324,6 +324,25 @@ ul, ol { padding: 0; list-style: none; }
   color: var(--ink);
 }
 
+/* ---------- Skills ---------- */
+.skills {
+  padding-block: var(--section);
+  border-top: 1px solid var(--rule);
+}
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 2.5rem;
+}
+.skill-group h3 {
+  font-size: var(--step-1);
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--fibre);
+}
+.skill-group .tags { justify-content: flex-start; }
+
 /* ---------- Global teams ---------- */
 .global { padding-bottom: var(--section); }
 .global-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: end; }
@@ -591,6 +610,7 @@ ul, ol { padding: 0; list-style: none; }
   .project-lead { grid-template-columns: 1fr; }
   .project-lead .project-body { padding-top: 0; }
   .cred-grid { grid-template-columns: 1fr 1fr; }
+  .skill-grid { grid-template-columns: 1fr 1fr; }
   .area-list { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
   .fibre { display: none; }
   .global-intro { grid-template-columns: 1fr; }
@@ -644,6 +664,7 @@ ul, ol { padding: 0; list-style: none; }
   .stop { border-top: 0; padding-top: 0; }
   .stop::before { top: 0.45rem; left: calc(-1.5rem - 1px); transform: translateX(-50%); }
   .cred-grid { grid-template-columns: 1fr; }
+  .skill-grid { grid-template-columns: 1fr; }
   .timeline { padding-left: 1.75rem; }
   .role::before { left: calc(-1.75rem + 7px); }
   .contact-list li { grid-template-columns: 5rem 1fr; }
